@@ -2,7 +2,7 @@ FROM python:3.6
 
 # BACKEND: install
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
- && DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential ruby-dev \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential ruby-dev libpng-dev zlib1g-dev libkrb5-dev \
  && rm -rf /var/lib/apt/lists/* \
  && pip3 install --upgrade pip
 
@@ -25,7 +25,7 @@ RUN set -ex \
   done
 
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 7.7.4
+ENV NODE_VERSION 7.8.0
 
 RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
   && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
