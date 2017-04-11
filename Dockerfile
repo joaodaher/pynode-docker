@@ -25,7 +25,7 @@ RUN set -ex \
   done
 
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 7.8.0
+ENV NODE_VERSION 7.5.0
 
 RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
   && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
@@ -51,4 +51,3 @@ RUN set -ex \
   && chmod +x /usr/local/bin/yarn
 
 RUN curl -L https://npmjs.com/install.sh | sh
-
