@@ -49,6 +49,3 @@ RUN set -ex \
   && rm yarn.js.asc \
   && mv yarn.js /usr/local/bin/yarn \
   && chmod +x /usr/local/bin/yarn
-
-RUN curl -L https://npmjs.com/install.sh | sh
-
