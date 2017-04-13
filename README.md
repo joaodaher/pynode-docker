@@ -1,7 +1,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/joaodaher/pynode.svg)](https://hub.docker.com/r/joaodaher/pynode/)
 [![Docker Automated buil](https://img.shields.io/docker/automated/joaodaher/pynode.svg)](https://hub.docker.com/r/joaodaher/pynode/)
 [![Python](https://img.shields.io/badge/Python-3.6.1-brightgreen.svg)]()
-[![Node](https://img.shields.io/badge/NodeJS-7.8.0-brightgreen.svg)]()
+[![Node](https://img.shields.io/badge/NodeJS-7.9.0-brightgreen.svg)]()
 
 # PyNode
 
@@ -15,7 +15,12 @@ With this image, you can:
     RUN pip3 install requirements.txt
     
 
-* Install Node packages:
+* Install Node packages (with NPM):
 
 
     npm install
+    
+* Install Node packages (with YARN):
+    
+    
+    yarn install
